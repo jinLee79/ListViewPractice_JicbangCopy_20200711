@@ -23,6 +23,15 @@ class RoomAdapter(val mContext:Context, val resId:Int, val mList:List<Room>) : A
 
         val row = tempRow!!
 
+        val priceTxt = row.findViewById<TextView>(R.id.priceTxt)
+        val addressAndFloorTxt = row.findViewById<TextView>(R.id.addressTxt)
+        val descTxt = row.findViewById<TextView>(R.id.descTxt)
+
+        val data = mList[position]
+
+        priceTxt.text = data.getPriceTxt()
+        addressAndFloorTxt.text = data.getAddressAndFloorTxt()
+        descTxt.text = data.description
 
         return row
     }
