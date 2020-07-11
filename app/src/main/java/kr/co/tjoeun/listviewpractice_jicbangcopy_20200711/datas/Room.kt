@@ -9,17 +9,29 @@ class Room (
     val floor:Int,
     val description:String ){
 
-    fun getPriceTxt(): String{
+    fun getFormattedFloor() : String {
+        if (floor > 0) {
+            return "${this.floor}층"
+        }
+        else if (floor == 0) {
+            return "반지하"
+        }
+        else {
+            return "지하 ${-this.floor}층"
+        }
+
+    }
+
+
+    fun getFormattedPrice(): String {
         var priceTxt = NumberFormat.getInstance().format(price)
 //        12000 -> 1억 2000  | 132000 -> 13억 2000
         if (price >= 10000) {
-            var eok = round((price/10000).toDouble())
+            val eok = round((price/10000).toDouble())
 
+            priceTxt = eok.toString()
         }
         return priceTxt
-    }
-    fun getAddressAndFloorTxt() : String{
-        return address + ", " + floor + "층"
     }
 
 }

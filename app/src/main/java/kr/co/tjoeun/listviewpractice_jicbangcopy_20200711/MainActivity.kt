@@ -28,7 +28,7 @@ class MainActivity : BaseActivity() {
         mRoomList.add(Room(26700, "서울시 은평구", 4, "서울시 은평구의 4층 방입니다."))
         mRoomList.add(Room(7600, "서울시 동작구", -1, "지하에 살래?"))
         mRoomList.add(Room(335550, "서울시 강남구", 13, "서울시 강남구의 펜트하우스입니다."))
-        mRoomList.add(Room(266600, "서울시 강서구", 2, "서울시 강서구의 2층 방입니다."))
+        mRoomList.add(Room(266600, "서울시 강서구", 0, "서울시 강서구의 반지하 방입니다."))
         mRoomList.add(Room(800, "서울시 강동구", 1, "서울시 강동구 1층 방입니다."))
         mRoomList.add(Room(129900, "서울시 금천구", -1, "서울시 금천구 지하1층 방입니다."))
         mRoomList.add(Room(11111, "서울시 마포구", 3, "서울시 마포구 3층 방입니다."))
