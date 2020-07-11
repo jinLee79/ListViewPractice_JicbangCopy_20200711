@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import kr.co.tjoeun.listviewpractice_jicbangcopy_20200711.R
 import kr.co.tjoeun.listviewpractice_jicbangcopy_20200711.datas.Room
+import org.w3c.dom.Text
 
 class RoomAdapter(val mContext:Context, val resId:Int, val mList:List<Room>) : ArrayAdapter<Room>(mContext, resId, mList) {
 
@@ -20,6 +22,7 @@ class RoomAdapter(val mContext:Context, val resId:Int, val mList:List<Room>) : A
         }
 
         val row = tempRow!!
+
 
         return row
     }
