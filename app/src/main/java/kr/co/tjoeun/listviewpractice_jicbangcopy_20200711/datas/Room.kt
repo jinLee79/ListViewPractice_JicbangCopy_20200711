@@ -19,19 +19,26 @@ class Room (
         else {
             return "지하 ${-this.floor}층"
         }
-
     }
 
 
     fun getFormattedPrice(): String {
-        var priceTxt = NumberFormat.getInstance().format(price)
-//        12000 -> 1억 2000  | 132000 -> 13억 2000
-        if (price >= 10000) {
-            val eok = round((price/10000).toDouble())
+        if (this.price >= 10000) {
+//            28500 => 2억 8,500 형태로 가공.
+//            2억 => 28500/10000 => 2
+            val eok = this.price / 10000
 
-            priceTxt = eok.toString()
+//            8500 분리
+//            28500 % 10000
+            val rest = this.price % 10000
+
+            return String.format("%d억 %,d", eok, rest)
         }
-        return priceTxt
+        else {
+//            return NumberFormat.getInstance().format(price)
+            return String.format("%,d", this.price)
+        }
+
     }
 
 }
