@@ -1,9 +1,8 @@
-package kr.co.tjoeun.listviewpractice_jicbangcopy_20200711.datas
+package kr.co.tjoeun.listviewpractice_jicbangcopy_20200711
 
-import android.content.Context
+
 import android.os.Bundle
-import kr.co.tjoeun.listviewpractice_jicbangcopy_20200711.BaseActivity
-import kr.co.tjoeun.listviewpractice_jicbangcopy_20200711.R
+import kr.co.tjoeun.listviewpractice_jicbangcopy_20200711.datas.Room
 
 class ViewRoomDetailActivity : BaseActivity() {
 
@@ -19,6 +18,8 @@ class ViewRoomDetailActivity : BaseActivity() {
     }
 
     override fun setValues() {
+        val roomData = intent.getSerializableExtra("room") as Room  //Casting
+
 
     }
 

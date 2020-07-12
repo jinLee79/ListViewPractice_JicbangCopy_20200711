@@ -1,5 +1,6 @@
 package kr.co.tjoeun.listviewpractice_jicbangcopy_20200711.datas
 
+import java.io.Serializable
 import java.text.NumberFormat
 import kotlin.math.round
 
@@ -7,7 +8,7 @@ class Room (
     val price:Int,
     val address:String,
     val floor:Int,
-    val description:String ){
+    val description:String ) : Serializable {    //Serializable interface implements 상태
 
     fun getFormattedFloor() : String {
         if (floor > 0) {

@@ -1,13 +1,10 @@
 package kr.co.tjoeun.listviewpractice_jicbangcopy_20200711
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kr.co.tjoeun.listviewpractice_jicbangcopy_20200711.adapters.RoomAdapter
 import kr.co.tjoeun.listviewpractice_jicbangcopy_20200711.datas.Room
-import kr.co.tjoeun.listviewpractice_jicbangcopy_20200711.datas.ViewRoomDetailActivity
 
 class MainActivity : BaseActivity() {
 
@@ -30,6 +27,8 @@ class MainActivity : BaseActivity() {
 
 //            상세 화면으로 진입
             val myIntent = Intent(mContext, ViewRoomDetailActivity::class.java)
+            myIntent.putExtra("room", clickedRoom)  // Serializable 사용
+            startActivity(myIntent)
 
         }
     }
